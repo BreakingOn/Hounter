@@ -1,0 +1,493 @@
+<!--На mоей mашине в данный mоmент слоmана клавиша V, поэтоmу когда я в коmmентариях буду использовать w вmесто V - это не ошибка, прошу извинить-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hounter Landing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!--importing fonts and libraries-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header> 
+    <div class="logo"><img src="src/logo.png" alt="Hounter Logo" class="logo-image"> <!--Header with logo, naming and info buttons-->
+        <span>Hounter</span></div>
+    <nav class="nav-links">
+        <div class="info-button">
+        <a href="#">About Us</a>
+        </div>
+        <div class="info-button">
+        <a href="#">Article</a>
+        </div>
+        <div class="info-button">
+        <a href="#">Property</a> 
+        </div>
+        <div class="sign-up-btn">
+        <a href="#">Sign Up!</a>
+        </div>
+    </nav>
+</header>
+
+<main class="main-content"> <!--main body of a page-->
+    
+    <div class="first-block"> <!--first block, containing catch phrase, short description, search bar, partners and phot with a slider of accomplishments-->
+    <div class="text-content">
+        <h1>Find The Place To Live Your Dreams Easily Here</h1>
+        <p class="subtext">Everything you need about finding your place to live will be here, where it will be easier for you.</p>
+        <div class="search-box">
+            <img src="src/searcIcon.png" alt="searchIcon" class="searchIcon">
+            <input type="text" placeholder="Search for the location you want">
+            <button>Search></button>
+        </div>
+        <div class="partnership">
+            <p class="subtext">Our Partnership:</p>
+            <div class="partners">
+                <img src="src/partner1.png" alt="partner1" class="partner-logos"> 
+                <img src="src/partner2.png" alt="partner2" class="partner-logos">
+                <img src="src/partner3.png" alt="partner3" class="partner-logos">
+                <img src="src/partner4.png" alt="partner4" class="partner-logos">
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Image section with widgets -->
+    <div class="image-content">
+        <img src="src/Screenshot_18.png" alt="House Image">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="widget">
+                        <!--Unresolwed issue of <> owerlapping widgets, it happend somewhere deep into dewelopment, so finding the root cause is almost impossible now-->
+                        <div class="photo-collage">
+                            <img src="src/widget-photo1.png" alt="User 1" class="single-photo">
+                            
+                        </div>
+                        <div class="widget-text">
+                            <h3>1K+ People</h3>
+                            <p>Successfully Getting Home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="widget">
+                        <img src="src/widget-photo2.png" alt="House Icon" class="single-photo">
+                        <div class="widget-text">
+                            <h3>56 Houses</h3>
+                            <p>Sold Monthly</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="widget">
+                        <img src="src/widget-photo3.png" alt="Experience Icon" class="single-photo">
+                        <div class="widget-text">
+                            <h3>4+ Years</h3>
+                            <p>Of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <div class="margin"></div> <!--a margin to space out different sections-->
+
+    <!--second block, containing featured houses. Unresolwed bug: for some reason slider has one-two indexes more than there is actually houses.-->
+    <!--Unrealized feature: sliders on Willa and Apartment tabs does not work, sadly-->
+    <!--This slider was done without the help of the swiper, because I faced some difficulties implementing it here specifically-->
+    <div class="featured-house">
+        <div class="header-tabs">
+            <p class="recommendation">—— Our Recommendation</p>
+            <h2>Featured House</h2>
+            
+        <!--Unresolwed bug: if I close this div, the entire page will just break-->        
+    </div>
+
+
+<!-- Tab links -->
+<div class="tabs">
+    <button class="tab-link active" onclick="openTab(event, 'house')">House</button>
+    <button class="tab-link" onclick="openTab(event, 'villa')">Villa</button>
+    <button class="tab-link" onclick="openTab(event, 'apartment')">Apartment</button>
+    <button class="prev-button">&lt;</button>
+    <button class="next-button">&gt;</button>
+</div>
+<!--House tab-->
+<div id="house" class="tab-content active-tab">
+    <h3>House</h3>
+    <div class="carousel">
+        <div class="carousel-wrapper">
+            <div class="carousel-item">
+                <img src="src/house1.png" alt="House 1" class="houses">
+                <p>Seller: John Doe<br>Location: New York</p>
+            </div>
+            <div class="carousel-item">
+                <img src="src/house2.png" alt="House 2" class="houses">
+                <p>Seller: Jane Smith<br>Location: California</p>
+            </div>
+            <div class="carousel-item">
+                <img src="src/house3.png" alt="House 3" class="houses">
+                <p>Seller: Bob Johnson<br>Location: Texas</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Unresolwed issue: images with different sizes-->
+<!--Villa tab-->
+<div id="villa" class="tab-content">
+    <h3>Villa</h3>
+   
+       
+        <div class="carousel-wrapper">
+          <div class="carousel-item">
+            <img src="src/villa1.jpg" alt="Villa 1" class="houses">
+            <p>Seller: Emily Davis</p>
+            <p>Location: Miami</p>
+          </div>
+          <div class="carousel-item">
+            <img src="src/villa2.jpg" alt="Villa 2" class="houses" >
+            <p>Seller: Chris Lee</p>
+            <p>Location: Orlando</p>
+          </div>
+        </div>
+        
+      </div>
+    
+</div>
+<!--Apartment tab-->
+<div id="apartment" class="tab-content">
+    <h3>Apartment</h3>
+    <div class="carousel-wrapper">
+        
+        <div class="carousel-wrapper">
+          <div class="carousel-item">
+            <img src="src/apartment1.jpg" alt="Apartment 1" class="houses">
+            <p>Seller: Anna Brown</p>
+            <p>Location: Seattle</p>
+          </div>
+          <div class="carousel-item">
+            <img src="src/apartment3.jpeg" alt="Apartment 2" class="houses">
+            <p>Seller: Mark Wilson</p>
+            <p>Location: San Francisco</p>
+          </div>
+        </div>
+        
+      </div>
+</div>
+
+<div class="margin"></div>
+
+<!--Known issue: sometimes is works normally but sometimes whatewer the last image or wideo was chosen in modal, it will always open until you switch manually in the modal-->
+<div class="banner">
+    <!--Left side of the block-->
+    <div class="left-content">
+        <span class="recommendation">—— Ready To Sell!</span>
+        <h2>Let’s Tour And See Our House!</h2>
+        <p class="tagline">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+        <div class="house-details">
+            <div class="detail-item">
+                <i class="icon"></i>
+                <p>4 Bedrooms</p>
+            </div>
+            <div class="detail-item">
+                <i class="icon"></i>
+                <p>2 Bathrooms</p>
+            </div>
+            <div class="detail-item">
+                <i class="icon"></i>
+                <p>1 Carport</p>
+            </div>
+            <div class="detail-item">
+                <i class="icon"></i>
+                <p>2 Floors</p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <img src="src/human5.png" alt="Dianne Russell">
+            <div class="contact-details">
+                <p class="name">Dianne Russell</p>
+                <p class="position">Manager Director</p>
+            </div>
+            <button class="contact-btn">Contact Now</button>
+        </div>
+    </div>
+    <!--Right side of the block-->
+    <!--Known bug: you can actually see bottom border of the bottom small photo, don't know why-->
+    <div class="right-collage">
+        <div class="image-large" onclick="openModal(1)">
+            <img src="src/house2.png" alt="House Tour">
+        </div>
+        <div class="image-small image-small-top" onclick="openModal(0)">
+            <img src="src/villa2.jpg" alt="Interior 1">
+        </div>
+        <div class="image-small image-small-bottom" onclick="openModal(2)">
+            <img src="src/prewiew.jpg" alt="Interior 2">
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slides inside the Modal -->
+                <div class="swiper-slide">
+                    <img src="src/house1.png" alt="House 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="src/house2.png" alt="House 2">
+                </div>
+                <div class="swiper-slide">
+                    <iframe src="https://vk.com/video_ext.php?oid=-45407543&id=170741893&hd=2&autoplay=1" width="853" height="480" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="swiper-button-next swiper-custom-next"></div>
+            <div class="swiper-button-prev swiper-custom-prev"></div>
+        </div>
+    </div>
+</div>
+
+<div class="margin"></div>
+
+<!--Reviews page. Unrealised feature of pagination (just won't appear for some reason)-->
+<!--Unresolwed bug: despite catchphrase and rewiews both being centred, they're not on the same place.-->
+<div class="reviews-section">
+    <div class="reviews-header">
+        <p class="recommendation">——</p>
+        <p class="recommendation">See Our Review</p>
+        <h2>What Our Users Say About Us</h2>
+    </div>
+</div>
+    <!--Slider-->
+    <div class="swiper-container reviews-wrapper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide review-container">
+                <div class="house-image">
+                    <img src="src/house1.png" alt="House">
+                </div>
+                <div class="review-content">
+                    <p class="review-text">Best! I Got The House I Wanted Through Hounter</p>
+                    <div class="review-author">
+                        <img src="src/human5.png" alt="Dianne Russell" class="author-image">
+                        <div>
+                            <p class="author-name">Dianne Russell</p>
+                            <p class="author-title">Manager Director</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                       
+                        <span>4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide review-container">
+                <div class="house-image">
+                    <img src="src/house2.png" alt="House">
+                </div>
+                <div class="review-content">
+                    <p class="review-text">Through The Hounter I Found My Dream Home</p>
+                    <div class="review-author">
+                        <img src="src/human4.png" alt="Esther Howard" class="author-image">
+                        <div>
+                            <p class="author-name">Esther Howard</p>
+                            <p class="author-title">Head of Marketing</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                      
+                        <span>4.3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide review-container">
+                <div class="house-image">
+                    <img src="src/house3.png" alt="House">
+                </div>
+                <div class="review-content">
+                    <p class="review-text">Through The Hounter I Found My Dream Home</p>
+                    <div class="review-author">
+                        <img src="src/human1.png" alt="Esther Howard" class="author-image">
+                        <div>
+                            <p class="author-name">Esther Howard</p>
+                            <p class="author-title">Head of Marketing</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                       
+                        <span>4.3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <!--  <div class="swiper-pagination"></div> pagination right there just wouldn't appear for an unknown reason-->
+    </div>
+
+    <div class="margin"></div>
+
+    <!--News block-->
+    <div class="news-section">
+        <div class="news-header">
+            <p class="recommendation">——</p>
+            <p class="recommendation">See Tips And Tricks From Our Partnership</p>
+            <h2>Find Out More About Selling And Buying Homes</h2>
+            <button class="more-articles-btn">More Artikel</button>
+        </div>
+        
+        <div class="news-content">
+            <!-- Left column -->
+            <div class="left-column">
+                <div class="news-item">
+                    <img src="src/house1.png" alt="Preview" class="news-preview">
+                    <div class="news-details">
+                        <div class="author">
+                            <img src="src/human5.png" alt="Author" class="author-image">
+                            <span class="author-name">Dianne Russell</span>
+                        </div>
+                        <h3>The Things We Need To Check When We Want To Buy A House</h3>
+                        <div class="news-meta">
+                            <i class="icon-clock"></i>
+                            <span>4 min read | 25 Apr 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="src/house2.png" alt="Preview" class="news-preview">
+                    <div class="news-details">
+                        <div class="author">
+                            <img src="src/human4.png" alt="Author" class="author-image">
+                            <span class="author-name">Courtney Henry</span>
+                        </div>
+                        <h3>7 Ways To Distinguish The Quality Of The House We Want To Buy</h3>
+                        <div class="news-meta">
+                            <i class="icon-clock"></i>
+                            <span>6 min read | 24 Apr 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="src/house3.png" alt="Preview" class="news-preview">
+                    <div class="news-details">
+                        <div class="author">
+                            <img src="src/human1.png" alt="Author" class="author-image">
+                            <span class="author-name">Darlene Robertson</span>
+                        </div>
+                        <h3>The Best Way To Know The Quality Of The House We Want To Buy</h3>
+                        <div class="news-meta">
+                            <i class="icon-clock"></i>
+                            <span>2 min read | 24 Apr 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Right column with bigger news. -->
+            <div class="right-column">
+                <img src="src/Screenshot_18.png" alt="Big Preview" class="big-news-preview">
+                <div class="news-details">
+                    <div class="author">
+                        <img src="src/human2.png" alt="Author" class="author-image">
+                        <span class="author-name">Cameron Williamson</span>
+                    </div>
+                    <h3>12 Things To Know Before Buying A House</h3>
+                    <p>Want to buy a house but are unsure about what we should know? Here I will try to explain what we should know and check when we want to buy a house.</p>
+                    <div class="news-meta">
+                        <i class="icon-clock"></i>
+                        <span>8 min read | 25 Apr 2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="margin"></div>
+
+    <!--Subscribe section-->
+    <div class="subscribe-section">
+        <div class="subscribe-content">
+            <h2>Subscribe For More Info And Update From Hounter</h2>
+            <div class="subscribe-input-container"> <!--Unresolwed bug: input just won't change it's size-->
+                <img src="src/searcIcon.png" alt="searchIcon" class="searchIcon">
+                <input type="text" placeholder="Search for the location you want">
+                <button>Search></button> 
+            </div>
+        </div>
+        
+        <!-- Randomly tossed images on subscribe banner -->
+        <div class="floating-images">
+            <img src="src/house1.png" alt="Random Image" class="floating-img img1">
+            <img src="src/house2.png" alt="Random Image" class="floating-img img2">
+            <img src="src/house3.png" alt="Random Image" class="floating-img img3">
+            <img src="src/Screenshot_18.png" alt="Random Image" class="floating-img img4">
+            <img src="src/human1.png" alt="Random Image" class="floating-img img5">
+            <img src="src/human2.png" alt="Random Image" class="floating-img img6">
+            <img src="src/human4.png" alt="Random Image" class="floating-img img7">
+        </div>
+    </div>
+
+    
+<div class="margin"></div>
+
+
+    
+    
+</main>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!--Initializing swiper-->
+<script src="script.js"></script>
+
+<!--Footer -->
+<footer class="footer">
+    <!--Logo side of the footer-->
+    <div class="footer-left">
+        <div class="footer-logo">
+            <img src="src/logo.png" alt="Website Logo">
+        </div>
+        <p class="footer-description">
+           We prowide the best solution for your comfort and dreams.
+        </p>
+        <div class="footer-socials">
+            <a href="#"><img src="src/facebook-icon.png" alt="face" class="partner-logos"></a>
+            <a href="#"><img src="src/twitter-icon.png" alt="twi" class="partner-logos"></a>
+            <a href="#"><img src="src/insta-icon.png" alt="in" class="partner-logos"></a>
+        </div>
+    </div>
+    <!--Information side of the footer-->
+    <div class="footer-right">
+        <div class="footer-column">
+            <h3>Property</h3>
+            <ul>
+                <li><a href="#">House</a></li>
+                <li><a href="#">Villa</a></li>
+                <li><a href="#">Apartment</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Article</h3>
+            <ul>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contacts</h3>
+            <ul>
+                <li>123 Main St, City</li>
+                <li>+123 456 7890</li>
+                <li><a href="mailto:info@website.com">info@website.com</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
